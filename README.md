@@ -3,4 +3,4 @@ This easy-to-use WordPress plugin makes your site require login by sending all v
 
 
 
-![alt text](https://github.com/keytonic/wp-login-mod/blob/main/1.png?raw=true)
+![alt text](https://github.com/keytonic/wp-login-mod/main/1.png?raw=true](https://raw.githubusercontent.com/keytonic/wp-login-mod/main/images/1.png)
