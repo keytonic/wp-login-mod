@@ -11,9 +11,7 @@ This easy-to-use WordPress plugin forces user login by redirecting all visitors 
 <br />
 
 ## Add a message on the login page
-
-#### test
-### test
+Let your users know whats going on with a convienient message
 
 
 <p align="center">
@@ -22,9 +20,10 @@ This easy-to-use WordPress plugin forces user login by redirecting all visitors 
   width="430" height="605">
 </p>
 
+<br />
 
 ## Easy to configure with custom HTML, CSS & JS
-
+Totally configurable. You can customize the entire login page by inserting your own CSS or JS. Insert HTML tags into a login page message, or turn it off entirely.
 
 <p align="center">
 <img src="https://raw.githubusercontent.com/keytonic/wp-login-mod/main/images/1.png"
@@ -32,7 +31,10 @@ This easy-to-use WordPress plugin forces user login by redirecting all visitors 
   width="696" height="674">
 </p>
 
+<br />
 
+## Activate and configure, simple!
+This plugin does what is supposed to, quietly. No annoying pop-ups, ads or notifications. Set it and forget it!
 
 
 <p align="center">
