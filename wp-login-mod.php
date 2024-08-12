@@ -4,7 +4,7 @@
      * wp-login-mod
      *
      * Plugin Name:       wp-login-mod
-     * Description:       This easy-to-use plugin makes your site require login by sending all visitors to the login page. It turns your site into a private login-only page. You can also stop new users from registering, add a message on the login page, and include your own CSS and JS.
+     * Description:       This easy-to-use plugin makes your site require login by sending all visitors to the login page. It turns your site into a private login-only landing page. You can also stop new users from registering, add a message on the login page, and include your own CSS and JS.
      * Version:           1.00.0
      * Author:            keytonic
      * Author URI:        https://www.keytonic.net
