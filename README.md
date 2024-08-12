@@ -34,7 +34,7 @@ Totally configurable. You can customize the entire login page by inserting your 
 <br />
 
 ## Activate and configure, simple!
-This plugin does what it's supposed to... quietly. No annoying pop-ups, ads or notifications. Set it and forget it!
+This plugin does what it says... quietly. No annoying pop-ups, ads or notifications. Set it and forget it!
 
 
 <p align="center">
