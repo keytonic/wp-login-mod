@@ -9,6 +9,7 @@
      * Author:            keytonic
      * Author URI:        https://www.keytonic.net
      * License:           GNU General Public License v3.0
+     * License URI:       https://www.gnu.org/licenses/gpl-3.0.html
      */
 
     function forceLogin()
