@@ -8,6 +8,7 @@
      * Version:           1.00.0
      * Author:            keytonic
      * Author URI:        https://www.keytonic.net
+     * License:           GNU General Public License v3.0
      */
 
     function forceLogin()
