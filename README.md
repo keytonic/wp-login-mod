@@ -6,7 +6,9 @@ This easy-to-use WordPress plugin forces user login by redirecting all visitors 
 * Does what it says, quietly
 * Set it and forget it
 
+<br />
 
+## Add a message on the login page
 
 
 <p align="center">
@@ -16,11 +18,7 @@ This easy-to-use WordPress plugin forces user login by redirecting all visitors 
 </p>
 
 
-<p align="center">
-<img src="https://raw.githubusercontent.com/keytonic/wp-login-mod/main/images/2.png"
-  alt="Easy to configure"
-  width="160" height="273">
-</p>
+
 
 
 <p align="center">
@@ -38,4 +36,8 @@ This easy-to-use WordPress plugin forces user login by redirecting all visitors 
   width="681" height="129">
 </p>
 
-
+<p align="center">
+<img src="https://raw.githubusercontent.com/keytonic/wp-login-mod/main/images/2.png"
+  alt="Easy to configure"
+  width="160" height="273">
+</p>
