@@ -23,7 +23,7 @@ Let your users know whats going on with a convienient message
 <br />
 
 ## Easy to configure with custom HTML, CSS & JS
-Totally configurable. You can customize the entire login page by inserting your own CSS or JS. Insert HTML tags into a login page message, or turn it off entirely.
+Totally configurable. You can customize the entire login page by inserting your own CSS or JS. Insert HTML tags into your message, or turn it off entirely.
 
 <p align="center">
 <img src="https://raw.githubusercontent.com/keytonic/wp-login-mod/main/images/1.png"
