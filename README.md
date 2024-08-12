@@ -1,9 +1,11 @@
 # wp-login-mod
 This easy-to-use WordPress plugin forces user login by redirecting all visitors to the login page, effectively turning your site into a private, login-only landing page. You can also prevent new users from registering, add a message on the login page, and include your own CSS and JS.
 
+<br />
+
 * No annoying pop-ups, notifications, ads
-* No bloat or un-needed code
-* Does what it says, quietly
+* No bloat, un-needed code
+* Does what it's supposed to, quietly
 * Set it and forget it
 
 <br />
