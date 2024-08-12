@@ -40,7 +40,7 @@ This plugin does what it's supposed to... quietly. No annoying pop-ups, ads or n
 <p align="center">
 <img src="https://raw.githubusercontent.com/keytonic/wp-login-mod/main/images/3.png"
   alt="Easy to configure"
-  width="681" height="129">
+  width="728" height="136">
 </p>
 
 <p align="center">
