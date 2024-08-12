@@ -12,6 +12,9 @@ This easy-to-use WordPress plugin forces user login by redirecting all visitors 
 
 ## Add a message on the login page
 
+#### test
+### test
+
 
 <p align="center">
 <img src="https://raw.githubusercontent.com/keytonic/wp-login-mod/main/images/4.png"
@@ -20,7 +23,7 @@ This easy-to-use WordPress plugin forces user login by redirecting all visitors 
 </p>
 
 
-
+## Easy to configure with custom HTML, CSS & JS
 
 
 <p align="center">
