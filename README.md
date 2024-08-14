@@ -28,7 +28,7 @@ Totally configurable. You can customize the entire login page by inserting your 
 <p align="center">
 <img src="https://raw.githubusercontent.com/keytonic/wp-login-mod/main/images/1.png"
   alt="Easy to configure"
-  width="696" height="674">
+  width="696" height="723">
 </p>
 
 <br />

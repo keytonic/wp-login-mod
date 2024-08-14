@@ -12,6 +12,32 @@
      * License URI:       https://www.gnu.org/licenses/gpl-3.0.html
      */
 
+    function wpLoaded() 
+    {
+        //if admin access only is turned off bail
+        if(get_option('wp-login-mod-options')['adm'] != "1") return;
+
+        $current_user = wp_get_current_user();
+
+        //!current_user_can('administrator')
+        if (is_user_logged_in()  &&  !in_array('administrator', $current_user->roles))
+        {
+            //wp_logout();
+            wp_redirect('https://' . $_SERVER['HTTP_HOST'] . "/wp-login.php?action=disabled");
+        }
+    }
+    function loginMessage($message) 
+    {
+        $action = isset( $_REQUEST['action'] ) ? $_REQUEST['action'] : '';
+
+        if($action == "disabled")
+        {
+            $message = '<div id="login_error">Login Temporarily Disabled.</div>';
+            wp_logout();
+        }
+
+        return $message;
+    }
     function forceLogin()
     {
         //if force login is turned off bail
@@ -92,7 +118,8 @@
         register_setting('wp-login-mod-group','wp-login-mod-options', 'sanitize');
         add_settings_section('sectionOne','','sectionTitle' , 'wp-login-mod-admin');  
         add_settings_field('reg','Disable new user registration.','reg_callback' ,'wp-login-mod-admin','sectionOne');
-        add_settings_field('log','Force user login.','log_callback' ,'wp-login-mod-admin','sectionOne');
+        add_settings_field('log','Require login to view site.','log_callback' ,'wp-login-mod-admin','sectionOne');
+        add_settings_field('adm','Restrict login access to admin accounts only.','adm_callback' ,'wp-login-mod-admin','sectionOne');
         add_settings_field('sho','Show Login page message.','sho_callback' ,'wp-login-mod-admin','sectionOne');
         add_settings_field('msg','Login page message:','msg_callback' ,'wp-login-mod-admin','sectionOne');
         add_settings_field('css','CSS:','css_callback' ,'wp-login-mod-admin','sectionOne');
@@ -108,6 +135,7 @@
         isset($input['reg']) ? $new_input['reg'] = "1" : $new_input['reg'] = "0";
         isset($input['log']) ? $new_input['log'] = "1" : $new_input['log'] = "0";
         isset($input['sho']) ? $new_input['sho'] = "1" : $new_input['sho'] = "0";
+        isset($input['adm']) ? $new_input['adm'] = "1" : $new_input['adm'] = "0";
         return $new_input;
     }
     //call back functions for settings on options page
@@ -117,24 +145,23 @@
     }
     function reg_callback()
     {
-        $enabled = "0";
-        if(isset( get_option('wp-login-mod-options')['reg']) && get_option('wp-login-mod-options')['reg'] == "1")
-            $enabled = "1";
+        $enabled = get_option('wp-login-mod-options')['reg'];
         echo '<input type="checkbox" id="reg" name="wp-login-mod-options[reg]" value="1" '. (($enabled == "1") ? "checked" : "") .'>';
     }
     function log_callback()
     {
-        $enabled = "0";
-        if(isset( get_option('wp-login-mod-options')['log']) && get_option('wp-login-mod-options')['log'] == "1")
-            $enabled = "1";
+        $enabled = get_option('wp-login-mod-options')['log'];
         echo '<input type="checkbox" id="log" name="wp-login-mod-options[log]" value="1" '. (($enabled == "1") ? "checked" : "") .'>';
     }
     function sho_callback()
     {
-        $enabled = "0";
-        if(isset( get_option('wp-login-mod-options')['sho']) && get_option('wp-login-mod-options')['sho'] == "1")
-            $enabled = "1";
+        $enabled = get_option('wp-login-mod-options')['sho'];
         echo '<input type="checkbox" id="sho" name="wp-login-mod-options[sho]" value="1" '. (($enabled == "1") ? "checked" : "") .'>';
+    }
+    function adm_callback()
+    {
+        $enabled = get_option('wp-login-mod-options')['adm'];
+        echo '<input type="checkbox" id="adm" name="wp-login-mod-options[adm]" value="1" '. (($enabled == "1") ? "checked" : "") .'>';
     }
     function msg_callback()
     {
@@ -156,10 +183,12 @@
     {
         update_option( 'users_can_register', 0 );
     }
+    add_action('wp_loaded', 'wpLoaded');
     add_action('init', 'forceLogin');
     add_action('login_head', 'loginHead');//Fires in the login page header after scripts are enqueued.
     add_action('login_footer', 'loginFooter');//Fires in the login page footer.
-    add_action( 'admin_menu','addOptionsPage');
-    add_action( 'admin_init','pageInit');
+    add_action('admin_menu','addOptionsPage');
+    add_action('admin_init','pageInit');
     add_filter('plugin_action_links_' . plugin_basename(__FILE__),'pluginActionLinks');
+    add_filter('login_message', 'loginMessage',10,1);
 ?>
